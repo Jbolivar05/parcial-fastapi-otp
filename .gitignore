@@ -1,0 +1,7 @@
+sql_app.db
+__pycache__/
+*.pyc
+.env
+.pytest_cache/
+venv/
+env/
