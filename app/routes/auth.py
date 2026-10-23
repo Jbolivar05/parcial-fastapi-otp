@@ -98,6 +98,11 @@ def solicitar_nuevo_codigo(datos: SolicitudReenviarOTP, db: Session = Depends(ob
     generar_y_notificar_otp(cuenta, db)
     return {"mensaje": "Te hemos reenviado un nuevo codigo de seguridad"}
 
+    print(
+    f"****************** CODIGO OTP: {codigo_otp} ******************",
+    flush=True,
+)
+
 
 @enrutador.post("/refresh", response_model=RespuestaTokenAcceso)
 def renovar_credencial_acceso(
